@@ -1,21 +1,9 @@
-# Ejemplo de API con NodeJS + MongoDB + JWT
-
-### Basado en
-
-```
-https://www.bezkoder.com/node-js-express-login-mongodb/
-```
+# API con NodeJS + MongoDB + JWT
 
 # Crear usuario de base de datos MongoDB
 
 ```
-db.createUser(
-  {
-    user: "ejemplo",
-    pwd: "ejemplo",
-    roles: [ { role: "userAdmin", db: "ejemplo" } ]
-  }
-)
+db.createUser({user:"kfajardo", pwd:"user123", roles:[{role:"userAdmin", db:"tarea6"}]});
 ```
 
 1. Instalar dependeicias
@@ -38,10 +26,10 @@ npm start
 http://127.0.0.1:9090/api/auth/signup
 
 {
-    "username": "admin",
+    "username": "Kimberlin",
     "password": "admin",
-    "fullname": "I'm example",
-    "email": "admin@hola.com",
+    "fullname": "K Fajardo",
+    "email": "kf@hola.com",
     "roles": ["admin"]
 }
 ```
@@ -51,10 +39,14 @@ http://127.0.0.1:9090/api/auth/signup
 ```
 http://127.0.0.1:9090/api/auth/signin
 
+POST
 {
-    "username": "admin",
+    "username": "Kimberlin",
     "password": "admin"
 }
 ```
 
 6. Consumir los otros endpoints
+```
+http://127.0.0.1:9090/api/math/initialV
+```
