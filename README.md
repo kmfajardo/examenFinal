@@ -49,4 +49,10 @@ POST
 6. Consumir los otros endpoints
 ```
 http://127.0.0.1:9090/api/math/initialV
+
+{
+    "vFinal": "27.0",
+    "vAceleracion": "14.5",
+    "tiempo": "4.2"
+}
 ```
