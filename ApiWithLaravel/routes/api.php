@@ -25,5 +25,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
 
-Route::post('store', [MathFunctionController::class, 'store']);
 
+//todas las rutas que se encuentren dentro, estaran protegidas
+//necesitaran autenticacion y token por sanctun
+Route::middleware(['auth:sanctum'])->group(function () {
+    Route::post('store', [MathFunctionController::class, 'store']);
+});

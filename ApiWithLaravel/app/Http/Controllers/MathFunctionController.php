@@ -20,20 +20,38 @@ class MathFunctionController extends Controller
         $request->validate([
             'vFinal' => 'required',
             'vAcel' => 'required',
-            'tiempo' => 'required'
+            'tiempo' => 'required',
+            'vInicial'
         ]);
 
         $resultado=0;
 
+        #obteniendo datos de la form
         $funcion=new MathFunction();
         $funcion->vFinal = $request->vFinal;
         $funcion->vAcel = $request->vAcel;
         $funcion->tiempo = $request->tiempo;
 
-        # guardar los datos
+        #formulacion
+        $veloFinal = $request->vFinal;
+        $parseVFinal = floatval($veloFinal);
+
+        $veloAceleracion = $request->vAcel;
+        $parseAceleracion = floatval($veloAceleracion);
+
+        $tiempoY = $request->tiempo;
+        $parseTiempo = floatval($tiempoY);
+
+        #realizacion de la operacion
+        $resultado = $parseVFinal - $parseAceleracion * $parseTiempo;
+
+        #asignando el resultado
+        $funcion->vInicial = $resultado;
+
+        # guardar los datos a la base de datos
         $funcion->save();
 
-        $resultado = $this->vFinal - $this->vAcel * $this->tiempo;
+        
         # API response
         return response([
             'status' => 200,

@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('math_functions', function (Blueprint $table) {
             $table->id();
-            $table->double('vInicial', 8, 3);
+            $table->double('vInicial', 8, 3)->nullable();
             $table->double('vFinal', 8, 3);
             $table->double('vAcel', 8, 3);
             $table->double('tiempo', 8, 3);
