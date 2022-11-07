@@ -1,10 +1,11 @@
 # API - Funcion de Obtener Velocidad Inicial
 
 La formula aplicada es: VI = VF - AT
-VI  = velocidad inicial
-VF  = velocidad final
-A   = aceleracion
-T   = tiempo
+
+1. VI  = velocidad inicial
+2. VF  = velocidad final
+3. A   = aceleracion
+4. T   = tiempo
 
 Tomar en cuenta el nombre de cada variable y la abreviacion, al igual que la formula.
 
@@ -18,7 +19,6 @@ Luego se debe de publicar las migraciones que necesita para poder funcionar lo a
 ```
 php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
 ```
-
 
 ### EndPoints
 

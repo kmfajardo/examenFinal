@@ -7,25 +7,6 @@ use Illuminate\Http\Request;
 
 class MathFunctionController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -35,51 +16,30 @@ class MathFunctionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        #estado de entrada/salida
+        $request->validate([
+            'vFinal' => 'required',
+            'vAcel' => 'required',
+            'tiempo' => 'required'
+        ]);
+
+        $resultado=0;
+
+        $funcion=new MathFunction();
+        $funcion->vFinal = $request->vFinal;
+        $funcion->vAcel = $request->vAcel;
+        $funcion->tiempo = $request->tiempo;
+
+        # guardar los datos
+        $funcion->save();
+
+        $resultado = $this->vFinal - $this->vAcel * $this->tiempo;
+        # API response
+        return response([
+            'status' => 200,
+            'message' => 'El resultado de la velocidad inicial es de: '.$resultado
+        ]);
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\MathFunction  $mathFunction
-     * @return \Illuminate\Http\Response
-     */
-    public function show(MathFunction $mathFunction)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\MathFunction  $mathFunction
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(MathFunction $mathFunction)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\MathFunction  $mathFunction
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, MathFunction $mathFunction)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\MathFunction  $mathFunction
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(MathFunction $mathFunction)
-    {
-        //
-    }
 }
