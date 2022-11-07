@@ -8,18 +8,25 @@ La formula aplicada es: VI = VF - AT
 4. T   = tiempo
 
 ### Modo de autenticacion por Laravel/Sanctum
+
 Uso de SANCTUM  para una autentificacion ligera para APIs y tambien para generar múltiples tokens API para la cuenta del usuario.
+
 ```
 composer require laravel/sanctum
 ```
 
+
 Luego se debe de publicar las migraciones que necesita para poder funcionar lo anterior.
+
 ```
 php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
 ```
 
+
 ### EndPoints
+
 **(POST)** FOR .../api/register 
+
 ```
 {
 	"name": "Examen Final",
@@ -29,6 +36,7 @@ php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
 ```
 
 De ser exitoso, se arroja el siguiente resultado:
+
 ```
 {
     "data": {
@@ -44,7 +52,9 @@ De ser exitoso, se arroja el siguiente resultado:
 ```
 
 Para realizar el inicio de sesion, se tiene el siguiente endpoint:
+
 **(POST)** FOR .../api/login
+
 ```
 {
 	"email": "web@gmail.com",
@@ -53,7 +63,9 @@ Para realizar el inicio de sesion, se tiene el siguiente endpoint:
 ```
 
 Para realizar la operacion aritmetica
+
 **(POST)** FOR .../api/store
+
 ```
 {
 	"vFinal": "45.0",
@@ -63,6 +75,7 @@ Para realizar la operacion aritmetica
 ```
 
 ### Base de Datos MySQL
+
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -75,25 +88,44 @@ DB_PASSWORD=lkshielsj384
 # Resultado Final del API
 
 1. **Intento de Usar el Endpoint de la Funcion Sin Estar Autenticado**
+
 Si el usuario no esta autenticado, por medio de Sanctum no se le permite realizar la accion.
-![No Authenticated](https://github.com/kmfajardo/examenFinal/tree/main\assets\noAuth.png)
+
+![No Authenticated](https://drive.google.com/file/d/19lJPTHUhLIWbxIIx96Oi3i8iuawXOFpm/view?usp=share_link)
+
 
 2. **Registro Necesario del Usuario Para Usar el API**
+
 Segun la documentacion el usuario debe de proveer los datos necesarios para registrarse.
-![Register](https://github.com/kmfajardo/examenFinal/tree/main\assets\register.png)
+
+![Register](https://drive.google.com/file/d/1bl0jpr5Xx_yudD5nLMwgST_GGfIR5mA8/view?usp=share_link)
+
 
 3. **Luego de Registrarse, Iniciar Sesion**
+
 Una vez el usuario se ha registrado, se debe de iniciar sesion.
-![Login](https://github.com/kmfajardo/examenFinal/tree/main\assets\login.png)
+
+![Login](https://drive.google.com/file/d/19LMTM_k3utWXNqfJY5xtLXyZRF1zPdAe/view?usp=share_link)
+
 
 4. **Ajustar Postman con Bearer Token**
+
 Una vez iniciada la sesion, se debe de ingresar el token obtenido para consumir el endpoint.
-![Bearer Token](https://github.com/kmfajardo/examenFinal/tree/main\assets\token.png)
+
+![Bearer Token](https://drive.google.com/file/d/1kEyJq3cLLuT6vGA6uHSn9mBGdQuOWNoy/view?usp=share_link)
+
 
 5. **Ingreso de los Datos para las Variables**
+
 Se debe de ingresar los datos para las variables, para ver funcionar la funcion metematica.
-![Consuming API](https://github.com/kmfajardo/examenFinal/tree/main\assets\ejemplo.png)
+
+![Consuming API](https://drive.google.com/file/d/1me6IHSlQIwUdAYbQ6r3ET0fEqs3Ekaiy/view?usp=share_link)
+
 
 6. **Datos Guardados en la Base de Datos**
+
 Se muestran las pruebas realizadas y los datos guardados en la base de datos.
-![Data Saved](https://github.com/kmfajardo/examenFinal/tree/main\assets\storedData.png)
+
+![Data Saved](https://drive.google.com/file/d/19swToNFoNM7FNcsosh0kzanl-8IKaWB3/view?usp=share_link)
+
+
