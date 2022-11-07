@@ -76,24 +76,24 @@ DB_PASSWORD=lkshielsj384
 
 1. **Intento de Usar el Endpoint de la Funcion Sin Estar Autenticado**
 Si el usuario no esta autenticado, por medio de Sanctum no se le permite realizar la accion.
-![No Authenticated](\assets\noAuth.png)
+![No Authenticated](https://github.com/kmfajardo/examenFinal/tree/main\assets\noAuth.png)
 
 2. **Registro Necesario del Usuario Para Usar el API**
 Segun la documentacion el usuario debe de proveer los datos necesarios para registrarse.
-![Register](\assets\register.png)
+![Register](https://github.com/kmfajardo/examenFinal/tree/main\assets\register.png)
 
 3. **Luego de Registrarse, Iniciar Sesion**
 Una vez el usuario se ha registrado, se debe de iniciar sesion.
-![Login](\assets\login.png)
+![Login](https://github.com/kmfajardo/examenFinal/tree/main\assets\login.png)
 
 4. **Ajustar Postman con Bearer Token**
 Una vez iniciada la sesion, se debe de ingresar el token obtenido para consumir el endpoint.
-![Bearer Token](\assets\token.png)
+![Bearer Token](https://github.com/kmfajardo/examenFinal/tree/main\assets\token.png)
 
 5. **Ingreso de los Datos para las Variables**
 Se debe de ingresar los datos para las variables, para ver funcionar la funcion metematica.
-![Consuming API](\assets\ejemplo.png)
+![Consuming API](https://github.com/kmfajardo/examenFinal/tree/main\assets\ejemplo.png)
 
 6. **Datos Guardados en la Base de Datos**
 Se muestran las pruebas realizadas y los datos guardados en la base de datos.
-![Data Saved](\assets\storedData.png)
+![Data Saved](https://github.com/kmfajardo/examenFinal/tree/main\assets\storedData.png)
