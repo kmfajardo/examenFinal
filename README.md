@@ -76,24 +76,24 @@ DB_PASSWORD=lkshielsj384
 
 1. **Intento de Usar el Endpoint de la Funcion Sin Estar Autenticado**
 Si el usuario no esta autenticado, por medio de Sanctum no se le permite realizar la accion.
-![No Authenticated](\ApiWithLaravel\assets\noAuth.png)
+![No Authenticated](\assets\noAuth.png)
 
 2. **Registro Necesario del Usuario Para Usar el API**
 Segun la documentacion el usuario debe de proveer los datos necesarios para registrarse.
-![Register](\ApiWithLaravel\assets\register.png)
+![Register](\assets\register.png)
 
 3. **Luego de Registrarse, Iniciar Sesion**
 Una vez el usuario se ha registrado, se debe de iniciar sesion.
-![Login](\ApiWithLaravel\assets\login.png)
+![Login](\assets\login.png)
 
 4. **Ajustar Postman con Bearer Token**
 Una vez iniciada la sesion, se debe de ingresar el token obtenido para consumir el endpoint.
-![Bearer Token](\ApiWithLaravel\assets\token.png)
+![Bearer Token](\assets\token.png)
 
 5. **Ingreso de los Datos para las Variables**
 Se debe de ingresar los datos para las variables, para ver funcionar la funcion metematica.
-![Consuming API](\ApiWithLaravel\assets\ejemplo.png)
+![Consuming API](\assets\ejemplo.png)
 
 6. **Datos Guardados en la Base de Datos**
 Se muestran las pruebas realizadas y los datos guardados en la base de datos.
-![Data Saved](\ApiWithLaravel\assets\storedData.png)
+![Data Saved](\assets\storedData.png)
